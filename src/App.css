@@ -1,11 +1,28 @@
-@font-face {
-    font-family: "CHEFiQ";
-    src: url("//cdn.shopify.com/s/files/1/0267/8118/8171/files/CHEFiQ-Bold.woff2?v=10525413058903443599") format("woff2"),url("//cdn.shopify.com/s/files/1/0267/8118/8171/files/CHEFiQ-Bold.woff?v=4318454705909141659") format("woff");
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap
+.btn-primary {
+  background-color: rgb(51, 242, 146) !important;
+  color: rgb(255,255,255) !important;
+  border: none !important;
 }
 
-.chef-text {
-  font-family: "CHEFiQ";
+.dropdown > .btn {
+  background-color: transparent !important;
+  color: #000 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.order-item {
+  box-shadow: 2px 2px 11px rgba(0,0,0,0.16);
+}
+
+.close {
+  outline: none !important;
+}
+
+@media (min-width: 1200px) {
+  .order-item {
+    width: 1200px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
 }
