@@ -15,7 +15,7 @@ function App() {
 
   const recipe = useSelector(state => state.recipe);
   const stores = useSelector(state => state.retail);
-  const total = useSelector(state => state.sum);
+  const total = recipe.hasOwnProperty('sum') ? recipe.sum : 0;
 
   return (
     <Container fluid>
@@ -29,8 +29,8 @@ function App() {
       <Row className="overflow-auto" style={{height: "calc(100vh - 220px)"}}>
         <Col>
           <Container fluid>
-          {recipe.map((item, idx) => {
-            return <OrderItem key={idx} item={item} stores={stores} itemId={idx}/>
+          {recipe.hasOwnProperty('recipe') && recipe.recipe.map((item, idx) => {
+            return <OrderItem key={`${idx}_${item.item}`} item={item} stores={stores} itemId={idx}/>
           })}
           </Container>
         </Col>

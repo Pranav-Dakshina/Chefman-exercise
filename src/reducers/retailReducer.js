@@ -5,11 +5,11 @@ export const retailReducer = function(state = [], action) {
         {
           store: "Walmart",
           delivery: 24,
-          price: 3.10
+          price: 10.50
         }, {
           store: "HEB",
           delivery: 48,
-          price: 1.50
+          price: 20.10
         }
 
       ];

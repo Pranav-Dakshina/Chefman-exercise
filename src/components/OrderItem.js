@@ -25,16 +25,15 @@ function OrderItem(props) {
   const [price, setPrice] = useState(parseFloat(retail.price) * (amount/100));
 
   useEffect(() => {
-    dispatch({ type: 'TOTAL', payload: price });
-  }, [])
-
-  useEffect(() => {
     const newPrice = parseFloat(retail.price) * (amount/100);
     if(price !== newPrice) {
-      dispatch({ type: "CHANGE_TOTAL", payload: newPrice - price});
       setPrice(newPrice);
     }
-  }, [amount, retail.price])
+  }, [amount, retail.price]);
+
+  useEffect(() => {
+    dispatch({ type: "CHANGE_PRICE", payload: {id: itemId, price: price}});
+  }, [price])
 
 
   return (
@@ -46,7 +45,7 @@ function OrderItem(props) {
         {item}
       </Col>
       <Col className="my-auto d-flex" xs={2} sm={3} md={2} lg={2}>
-        <Input type="number" step="1" defaultValue={amount} onChange={(evt) => {
+        <Input className="text-right" type="number" step="1" defaultValue={amount} onChange={(evt) => {
           dispatch({ type: 'CHANGE_AMOUNT', payload: {id: itemId, amt: evt.target.value}})
         }}/> <span className="p-2">g</span>
       </Col>
@@ -64,8 +63,7 @@ function OrderItem(props) {
           className="align-middle mt-1"
           close
           onClick={() => {
-            dispatch({type: "REMOVE_RECIPE", payload: itemId});
-            dispatch({ type: "CHANGE_TOTAL", payload: -parseInt(price)})
+            dispatch({type: "REMOVE_RECIPE", payload: {id: itemId, price: price}});
           }}
         />
       </Col>
