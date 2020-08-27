@@ -3,10 +3,7 @@ import {useSelector, useDispatch} from 'react-redux';
 import {Container, Row, Col, Button} from "reactstrap";
 
 import OrderItem from "./components/OrderItem";
-import "./App.css";
-
-import $ from 'jquery';
-window.jQuery = window.$ = $;
+import "./styles/App.css";
 
 function App() {
   const dispatch = useDispatch();
