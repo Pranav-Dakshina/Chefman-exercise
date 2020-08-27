@@ -1,38 +1,11 @@
-.App {
-  text-align: center;
+@font-face {
+    font-family: "CHEFiQ";
+    src: url("//cdn.shopify.com/s/files/1/0267/8118/8171/files/CHEFiQ-Bold.woff2?v=10525413058903443599") format("woff2"),url("//cdn.shopify.com/s/files/1/0267/8118/8171/files/CHEFiQ-Bold.woff?v=4318454705909141659") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.chef-text {
+  font-family: "CHEFiQ";
 }
