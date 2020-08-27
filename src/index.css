@@ -1,6 +1,14 @@
+@font-face {
+    font-family: "CHEFiQ";
+    src: url("//cdn.shopify.com/s/files/1/0267/8118/8171/files/CHEFiQ-Bold.woff2?v=10525413058903443599") format("woff2"),url("//cdn.shopify.com/s/files/1/0267/8118/8171/files/CHEFiQ-Bold.woff?v=4318454705909141659") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'CHEFiQ', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
