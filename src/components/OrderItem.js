@@ -37,7 +37,7 @@ function OrderItem(props) {
 
 
   return (
-    <Row className="my-2 py-3 justify-content-center rounded order-item">
+    <Row className="my-2 py-3 justify-content-center rounded order-item" data-testid="order-item">
       <Col xs="auto">
         <img src="logo192.png" width="30px" height="30px" alt="Ingredient" />
       </Col>
@@ -62,6 +62,7 @@ function OrderItem(props) {
         <Button
           className="align-middle mt-1"
           close
+          data-testid="close"
           onClick={() => {
             dispatch({type: "REMOVE_RECIPE", payload: {id: itemId, price: price}});
           }}

@@ -26,3 +26,11 @@
     margin-right: auto !important;
   }
 }
+
+input {
+  box-shadow: none !important;
+}
+
+.form-control:focus {
+  border-color: rgb(51, 242, 146) !important;
+}
